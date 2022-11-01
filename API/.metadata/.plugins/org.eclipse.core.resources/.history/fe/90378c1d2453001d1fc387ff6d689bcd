@@ -1,0 +1,72 @@
+package br.com.fiap.dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import br.com.fiap.to.UsuarioTO;
+
+public class UsuarioDAO {
+	public static List<UsuarioTO> listaUsuario;
+	
+	public UsuarioDAO() {
+		if (listaUsuario == null) {
+			listaUsuario = new ArrayList<UsuarioTO>();
+			UsuarioTO user = new UsuarioTO();
+			user.setLogin("Daniel");
+			user.setSenha("Daniel123");
+			user.setRm(94615);
+			user.setNome("Daniel Henrique");
+			listaUsuario.add(user);
+			
+			user = new UsuarioTO();
+			user.setLogin("Luis");
+			user.setSenha("Luis123");
+			user.setRm(94051);
+			user.setNome("Luis Felipe");
+			listaUsuario.add(user);
+			
+			user = new UsuarioTO();
+			user.setLogin("Lucas");
+			user.setSenha("Lucas123");
+			user.setRm(95084);
+			user.setNome("Lucas Guerra");
+			listaUsuario.add(user);
+			
+			user = new UsuarioTO();
+			user.setLogin("Pedro Henrique");
+			user.setSenha("Pedro123");
+			user.setRm(93939);
+			user.setNome("Pedro Henrique");
+			listaUsuario.add(user);
+			
+			user = new UsuarioTO();
+			user.setLogin("Pedro Victor");
+			user.setSenha("Pedro123");
+			user.setRm(93939);
+			user.setNome("Pedro Victor");
+			listaUsuario.add(user);
+		}
+	}
+	
+	
+	public UsuarioTO loginDAO(UsuarioTO u) {
+		for (int i = 0; i < listaUsuario.size(); i++) {
+			if (listaUsuario.get(i).getLogin().equals(u.getLogin())
+					&& listaUsuario.get(i).getSenha().equals(u.getSenha())) {
+				return listaUsuario.get(i);
+			}
+		}
+		return null;
+	}
+	
+	
+	//GET-BY_ID
+	public UsuarioTO select(int id){
+		for (int i = 0; i < listaUsuario.size(); i++) {
+			if(listaDeProdutos.get(i).getCodigo() == id) {
+				return listaDeProdutos.get(i) ;
+			}
+		}
+		return null;
+	}
+}

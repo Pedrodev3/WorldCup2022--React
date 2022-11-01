@@ -1,0 +1,39 @@
+package br.com.fiap.dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import br.com.fiap.to.UsuarioTO;
+
+public class UsuarioDAO {
+	public static List<UsuarioTO> listaUsuario;
+	
+	public UsuarioDAO() {
+		if (listaUsuario == null) {
+			listaUsuario = new ArrayList<UsuarioTO>();
+			UsuarioTO user = new UsuarioTO();
+			user.setLogin("Selva");
+			user.setSenha("12345");
+			user.setRm(94615);
+			user.setNome("Daniel Henrique");
+			listaUsuario.add(user);
+			user = new UsuarioTO();
+			user.setLogin("2");
+			user.setSenha("2");
+			listaUsuario.add(user);
+			user = new UsuarioTO();
+			user.setLogin("3");
+			user.setSenha("3");
+			listaUsuario.add(user);
+			user = new UsuarioTO();
+			user.setLogin("4");
+			user.setSenha("4");
+			listaUsuario.add(user);
+			user = new UsuarioTO();
+			user.setLogin("5");
+			user.setSenha("5");
+			listaUsuario.add(user);
+		}
+
+	}
+}

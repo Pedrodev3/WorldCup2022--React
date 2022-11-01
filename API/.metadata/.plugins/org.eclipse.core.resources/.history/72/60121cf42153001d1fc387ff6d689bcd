@@ -1,0 +1,11 @@
+package br.com.fiap.to;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+public class UsuarioTO {
+
+	public UsuarioTO() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

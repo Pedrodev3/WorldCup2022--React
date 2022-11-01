@@ -1,0 +1,9 @@
+package br.com.fiap.to;
+
+public class UsuarioTO {
+
+	public UsuarioTO() {
+		// TODO Auto-generated constructor stub
+	}
+
+}
